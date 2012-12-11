@@ -17,7 +17,7 @@ jimport('joomla.application.component.controller');
 jimport('joomla.application.component.helper');
 
 $helper = JApplicationHelper::getPath('helper');
-dump($helper,"helper");
+if(JDEBUG) dump($helper,"helper");
 require_once $helper;
 
 $user_option = JRequest::getCmd('option');
@@ -27,7 +27,7 @@ $user_task = JRequest::getCmd('task', 'view');
 global $scriptAdminForm;
 $scriptAdminForm = false;
 
-dumpMessage("Debug: Controler -> " .$user_controller);
+if(JDEBUG) dumpMessage("Debug: Controler -> " .$user_controller);
   
 if(is_null($user_controller) || empty($user_controller)){
 	$controllerFile = JPATH_COMPONENT.DS.'controller.php';
