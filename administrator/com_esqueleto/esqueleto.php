@@ -20,6 +20,8 @@ $helper = JApplicationHelper::getPath('helper');
 if(JDEBUG) dump($helper,"helper");
 require_once $helper;
 
+EsqueletoHelper::loadTables();
+
 $user_option = JRequest::getCmd('option');
 $user_controller = JRequest::getCmd('controller', NULL);
 $user_task = JRequest::getCmd('task', 'view');
