@@ -3,7 +3,7 @@ jimport('joomla.application.component.controller');
 jimport('joomla.application.component.helper');
 
 $helper = JApplicationHelper::getPath('helper');
-dump($helper,"helper");
+if(JDEBUG) dump($helper,"helper");
 require_once $helper;
 
 if ($this->params->get( 'show_page_title', 1)) : ?>
