@@ -2,7 +2,7 @@
 /**
  * @version		$Id: view.html.php 14401 2010-01-26 14:10:00Z louis $
  * @package		Joomla
- * @subpackage	Login
+ * @subpackage	Esqueleto
  * @copyright	Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
  * @license		GNU/GPL, see LICENSE.php
  * Joomla! is free software. This version may have been modified pursuant
@@ -20,7 +20,7 @@ jimport( 'joomla.application.component.view');
 /**
  *  
  *
- * @package		CSAT
+ * @package		Joomla
  * @subpackage	 Esqueleto
  * @since	1.0
  */
@@ -47,11 +47,11 @@ class EsqueletoViewExemplo extends JView
 		// Set some default page parameters if not set
 		$params->def( 'show_page_title', 				1 );
 		if (!$params->get( 'page_title')) {
-			$params->set('page_title',	JText::_( 'Detalhe da Vaga' ));
+			$params->set('page_title',	JText::_( 'Detalhes' ));
 		}
 		if(!$item)
 		{
-			$params->def( 'header_vagas', 			'' );
+			$params->def( 'header_detalhes', 			'' );
 		}
 
 		$params->def( 'pageclass_sfx', 			'' );
@@ -62,7 +62,7 @@ class EsqueletoViewExemplo extends JView
 		}
 		else
 		{
-			$title = JText::_( 'Detalhe da Vaga');
+			$title = JText::_( 'Detalhes do Item');
 
 			// pathway item
 			$pathway->addItem($title, '' );
