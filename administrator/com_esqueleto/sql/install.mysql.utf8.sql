@@ -1,1 +1,7 @@
-select 1
+DROP TABLE IF  EXISTS  `#__example`  ;
+
+CREATE TABLE IF NOT EXISTS  `#__example` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`data1` VARCHAR( 255 ) NOT NULL ,
+`data2` TIMESTAMP NULL
+) ;
