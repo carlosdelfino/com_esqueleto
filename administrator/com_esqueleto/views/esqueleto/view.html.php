@@ -33,6 +33,10 @@ class EsqueletoViewEsqueleto extends JView
 		// Initialize variables
 		$document	=& JFactory::getDocument();
 		$user		=& JFactory::getUser();
+		$model      =& $this->getModel(); // pega o model padrão 
+		$model2     =& $this->getModel("esqueleto2"); // pega o model de nome Esqueleto
+		 											  // aqui é uma fonte de erro deve ser o nome do arquivo model 
+		 											  // e não o sufixo da classe
 		  
 		// Get the return URL
 		if (!$url = JRequest::getVar('return', '', 'method', 'base64')) {
